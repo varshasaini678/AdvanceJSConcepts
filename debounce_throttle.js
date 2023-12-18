@@ -1,12 +1,12 @@
 console.log(b)
-let count
+let count=0
 var b=67;
 const getData = ()=>{
     console.log("got clicked",count++);
 }
 
 
-const debouncedFn = function(fn,delay){
+const debounce = function(fn,delay){
   
     let timer;
    
@@ -24,7 +24,6 @@ const debouncedFn = function(fn,delay){
   
 }
 
-const debouncedFng = debouncedFn(getData,100);
 
 
 const throttle = function(fn,delay){
@@ -45,8 +44,12 @@ const throttle = function(fn,delay){
 }
 
 const throttlefn = throttle(getData,100)
-document.getElementById('clickme').addEventListener('keypress',()=>{
+document.getElementById('throttle').addEventListener('keypress',()=>{
     throttlefn();
+})
 
 
+const debouncedFn = debounce(getData,100);
+document.getElementById('debounce').addEventListener('keypress',()=>{
+    debouncedFn();
 })
