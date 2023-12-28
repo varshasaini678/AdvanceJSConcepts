@@ -1,0 +1,19 @@
+#gParent{
+    width: auto;
+    position: relative;
+    background-color: aquamarine;
+    border: 1px solid gray;
+    padding: 20px;
+
+}
+
+#parent{
+    background-color: pink;
+    border: 1px solid gray;
+    padding: 20px;
+}
+#child{
+    border: 1px solid gray;
+    padding: 20px;
+    background-color: blueviolet;
+}
